@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-bekap-3-товар-e",
+  "editForm": "i-i-s-bekap-3-товар-e",
+  "external": false,
+  "caption": "Товар",
+  "name": "IISBekap_3ТоварL",
+  "className": "ТоварL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap-3-товар",
+      "modelProjection": "ТоварL"
+    }
+  ]
+}

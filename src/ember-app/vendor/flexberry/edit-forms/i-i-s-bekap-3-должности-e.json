@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Должности",
+  "name": "IISBekap_3ДолжностиE",
+  "className": "ДолжностиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap-3-должности",
+      "modelProjection": "ДолжностиE"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+﻿{
+  "name": "IISBekap_3Услуга",
+  "modelName": "i-i-s-bekap-3-услуга",
+  "className": "Услуга",
+  "nameSpace": "IIS.Bekap_3",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "длительность",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "услуги",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "составУслуги",
+      "relatedTo": "i-i-s-bekap-3-состав-услуги",
+      "inverse": "услуга"
+    }
+  ],
+  "projections": [
+    {
+      "name": "УслугаE",
+      "modelName": "i-i-s-bekap-3-услуга",
+      "attrs": [
+        {
+          "name": "услуги",
+          "caption": "Услуги",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "длительность",
+          "caption": "Длительность",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "СоставУслугиE",
+          "caption": "Табличная часть состав услуги",
+          "name": "составУслуги",
+          "relatedTo": "i-i-s-bekap-3-состав-услуги",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "УслугаL",
+      "modelName": "i-i-s-bekap-3-услуга",
+      "attrs": [
+        {
+          "name": "услуги",
+          "caption": "Услуги",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "длительность",
+          "caption": "Длительность",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

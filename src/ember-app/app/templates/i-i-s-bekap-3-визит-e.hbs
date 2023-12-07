@@ -1,0 +1,89 @@
+<h3 class="ui header">{{t "forms.i-i-s-bekap-3-визит-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодDизита
+      class=(if (v-get validationModel "кодDизита" "isInvalid") "error")
+      label=(t "forms.i-i-s-bekap-3-визит-e.кодDизита-caption")
+      data-test-i-i-s-bekap-3-визит-e-кодDизита=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодDизита" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.началоСеанса
+      class=(if (v-get validationModel "началоСеанса" "isInvalid") "error")
+      label=(t "forms.i-i-s-bekap-3-визит-e.началоСеанса-caption")
+      data-test-i-i-s-bekap-3-визит-e-началоСеанса=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "началоСеанса" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.конецСеанса
+      class=(if (v-get validationModel "конецСеанса" "isInvalid") "error")
+      label=(t "forms.i-i-s-bekap-3-визит-e.конецСеанса-caption")
+      data-test-i-i-s-bekap-3-визит-e-конецСеанса=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "конецСеанса" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap-3-визит-e.клиент-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.клиент
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="клиент"
+      projection="КлиентL"
+      title=(t "forms.i-i-s-bekap-3-визит-e.клиент-caption")
+      readonly=readonly
+      componentName="клиентLookup"
+      class=(if (v-get validationModel "клиент" "isInvalid") "error")
+      data-test-i-i-s-bekap-3-визит-e-клиент=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "клиент" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap-3-визит-e.записьВизита-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="записьВизитаGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.записьВизита
+      content=model.записьВизита
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "записьВизита" "isInvalid") "error")
+      data-test-i-i-s-bekap-3-визит-e-записьВизита=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "записьВизита" "message")}}
+  </div>
+</form>

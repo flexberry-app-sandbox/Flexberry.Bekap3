@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-bekap-3-сотрудник-e",
+  "editForm": "i-i-s-bekap-3-сотрудник-e",
+  "external": false,
+  "caption": "Сотрудник",
+  "name": "IISBekap_3сотрудникL",
+  "className": "сотрудникL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap-3-сотрудник",
+      "modelProjection": "сотрудникL"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<h3 class="ui header">{{t "forms.i-i-s-bekap-3-клиент-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.код
+      class=(if (v-get validationModel "код" "isInvalid") "error")
+      label=(t "forms.i-i-s-bekap-3-клиент-e.код-caption")
+      data-test-i-i-s-bekap-3-клиент-e-код=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "код" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фИО
+      class=(if (v-get validationModel "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-bekap-3-клиент-e.фИО-caption")
+      data-test-i-i-s-bekap-3-клиент-e-фИО=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фИО" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерТелефона
+      class=(if (v-get validationModel "номерТелефона" "isInvalid") "error")
+      label=(t "forms.i-i-s-bekap-3-клиент-e.номерТелефона-caption")
+      data-test-i-i-s-bekap-3-клиент-e-номерТелефона=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерТелефона" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap-3-клиент-e.датаРождения-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаРождения
+      class=(if (v-get validationModel "датаРождения" "isInvalid") "error")
+      data-test-i-i-s-bekap-3-клиент-e-датаРождения=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаРождения" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-bekap-3-клиент-e-пол="true">
+    <label>{{t "forms.i-i-s-bekap-3-клиент-e.пол-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-bekap-3-пол")
+      value=model.пол
+      class=(if (v-get validationModel "пол" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "пол" "message")}}
+  </div>
+</form>

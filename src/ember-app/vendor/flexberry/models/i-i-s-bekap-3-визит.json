@@ -1,0 +1,162 @@
+﻿{
+  "name": "IISBekap_3Визит",
+  "modelName": "i-i-s-bekap-3-визит",
+  "className": "Визит",
+  "nameSpace": "IIS.Bekap_3",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодDизита",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "конецСеанса",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "началоСеанса",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент",
+      "relatedTo": "i-i-s-bekap-3-клиент",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "записьВизита",
+      "relatedTo": "i-i-s-bekap-3-запись-визита",
+      "inverse": "визит"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ВизитE",
+      "modelName": "i-i-s-bekap-3-визит",
+      "attrs": [
+        {
+          "name": "кодDизита",
+          "caption": "Код dизита",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "началоСеанса",
+          "caption": "Начало сеанса",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "конецСеанса",
+          "caption": "Конец сеанса",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Клиент",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Клиент",
+          "name": "клиент",
+          "relatedTo": "i-i-s-bekap-3-клиент",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ЗаписьВизитаE",
+          "caption": "Табличная часть состав визита",
+          "name": "записьВизита",
+          "relatedTo": "i-i-s-bekap-3-запись-визита",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ВизитL",
+      "modelName": "i-i-s-bekap-3-визит",
+      "attrs": [
+        {
+          "name": "кодDизита",
+          "caption": "Код dизита",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "началоСеанса",
+          "caption": "Начало сеанса",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "конецСеанса",
+          "caption": "Конец сеанса",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "клиент",
+          "relatedTo": "i-i-s-bekap-3-клиент",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

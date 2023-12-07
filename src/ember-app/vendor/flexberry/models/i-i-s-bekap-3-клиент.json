@@ -1,0 +1,147 @@
+﻿{
+  "name": "IISBekap_3Клиент",
+  "modelName": "i-i-s-bekap-3-клиент",
+  "className": "Клиент",
+  "nameSpace": "IIS.Bekap_3",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "mail",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаРождения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "код",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТелефона",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "пол",
+      "type": "i-i-s-bekap-3-пол",
+      "flexberryType": "Пол",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фИО",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КлиентE",
+      "modelName": "i-i-s-bekap-3-клиент",
+      "attrs": [
+        {
+          "name": "код",
+          "caption": "Код",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "пол",
+          "caption": "Пол",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "КлиентL",
+      "modelName": "i-i-s-bekap-3-клиент",
+      "attrs": [
+        {
+          "name": "код",
+          "caption": "Код",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "пол",
+          "caption": "Пол",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

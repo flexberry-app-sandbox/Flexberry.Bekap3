@@ -1,0 +1,81 @@
+﻿{
+  "applicationCaption": "Bekap_3",
+  "applicationTitle": "Bekap_3",
+  "items": [
+    {
+      "link": null,
+      "menuName": "главная",
+      "caption": "Главная",
+      "title": "Главная",
+      "children": [
+        {
+          "link": "i-i-s-bekap-3-сотрудник-l",
+          "menuName": null,
+          "caption": "Сотрудник",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-bekap-3-визит-l",
+          "menuName": null,
+          "caption": "Визит",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-bekap-3-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-клиенты",
+      "caption": "Справочник клиенты",
+      "title": "Справочник клиенты",
+      "children": [
+        {
+          "link": "i-i-s-bekap-3-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "Клиент",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-услуги",
+      "caption": "Справочник услуги",
+      "title": "Справочник услуги",
+      "children": [
+        {
+          "link": "i-i-s-bekap-3-услуга-l",
+          "menuName": null,
+          "caption": "Услуга",
+          "title": "Услуга",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "товары",
+      "caption": "Товары",
+      "title": "Товары",
+      "children": [
+        {
+          "link": "i-i-s-bekap-3-товар-l",
+          "menuName": null,
+          "caption": "Товар",
+          "title": "Товар",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "товар",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "СоставУслуги.Товар",
+      "projection": "ТоварL",
+      "detailModelName": "i-i-s-bekap-3-состав-услуги"
+    }
+  ],
+  "external": false,
+  "caption": "Услуга",
+  "name": "IISBekap_3УслугаE",
+  "className": "УслугаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap-3-услуга",
+      "modelProjection": "УслугаE"
+    }
+  ]
+}

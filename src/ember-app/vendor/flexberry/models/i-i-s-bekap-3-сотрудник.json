@@ -1,0 +1,169 @@
+﻿{
+  "name": "IISBekap_3сотрудник",
+  "modelName": "i-i-s-bekap-3-сотрудник",
+  "className": "сотрудник",
+  "nameSpace": "IIS.Bekap_3",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаРождения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТелефона",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "пол",
+      "type": "i-i-s-bekap-3-пол",
+      "flexberryType": "Пол",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фИО",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "должности",
+      "relatedTo": "i-i-s-bekap-3-должности",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "сотрудникE",
+      "modelName": "i-i-s-bekap-3-сотрудник",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "пол",
+          "caption": "Пол",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Должность",
+          "lookupValueField": "должность",
+          "relationName": "Должности",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "должность",
+              "caption": "Должность",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Должности",
+          "name": "должности",
+          "relatedTo": "i-i-s-bekap-3-должности",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "сотрудникL",
+      "modelName": "i-i-s-bekap-3-сотрудник",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаРождения",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "пол",
+          "caption": "Пол",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Должности",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "должность",
+              "caption": "Должность",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Должность",
+          "name": "должности",
+          "relatedTo": "i-i-s-bekap-3-должности",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
